@@ -1,0 +1,6 @@
+{
+  "extends": "trybe-frontend",
+  "rules": {
+    "react/button-has-type": "off"
+  }
+}
