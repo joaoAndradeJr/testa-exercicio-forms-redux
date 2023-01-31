@@ -8,6 +8,7 @@
 
 <details>
   <summary><strong>‼️ Antes de começar a desenvolver</strong></summary><br/>
+
 - Crie um fork desse projeto, para isso siga esse [tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 - Após fazer o fork, clone o repositório criado para o seu computador.
 - Rode o comando `npm install`.
