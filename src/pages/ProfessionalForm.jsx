@@ -9,7 +9,7 @@ class ProfessionalForm extends Component {
     super();
     this.state = {
       resume: '',
-      job: '',
+      role: '',
       description: '',
     };
     this.handleChange = this.handleChange.bind(this);
@@ -21,7 +21,7 @@ class ProfessionalForm extends Component {
   }
 
   render() {
-    const { resume, job, description } = this.state;
+    const { resume, role, description } = this.state;
     return (
       <form
         onSubmit={ (e) => {
@@ -40,9 +40,9 @@ class ProfessionalForm extends Component {
         />
         <Input
           label="Cargo:"
-          name="job"
+          name="role"
           type="text"
-          value={ job }
+          value={ role }
           onChange={ this.handleChange }
           required
         />

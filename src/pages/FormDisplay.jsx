@@ -37,7 +37,7 @@ class FormDisplay extends Component {
         </div>
         <div>
           Cargo:
-          {/* { job } */}
+          {/* { role } */}
         </div>
         <div>
           Descrição do cargo:
@@ -51,7 +51,7 @@ class FormDisplay extends Component {
 // FormDisplay.propTypes = {
 //   name: PropTypes.string.isRequired,
 //   description: PropTypes.string.isRequired,
-//   job: PropTypes.string.isRequired,
+//   role: PropTypes.string.isRequired,
 //   resume: PropTypes.string.isRequired,
 //   uf: PropTypes.string.isRequired,
 //   city: PropTypes.string.isRequired,

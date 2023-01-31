@@ -76,7 +76,7 @@ A ordem das páginas deverá obedecer: `/` -> `personal-form` -> `professional-f
 
 ## 02 - Implementando o Redux
 
-Crie a estrutura de pastas e arquivos necessários para a implementação do Redux.
+Crie a estrutura de pastas e arquivos necessários para a implementação do Redux. Vale notar que o redux e dependências já estão instalados - inclusive o _Redux DevTools_
 
 <details>
   <summary>
