@@ -40,6 +40,15 @@ Agora, basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 
 </details>
 
+<details>
+  <summary><strong>🗣 Nos dê feedbacks sobre o exercício!</strong></summary> <br />
+
+  Ao finalizar e submeter o exercício, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
+
+  [FORMULÁRIO DE AVALIAÇÃO](https://be-trybe.typeform.com/to/ZTeR4IbH)
+
+</details>
+
 ---
 
 ## Começando o exercício
