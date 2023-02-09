@@ -35,7 +35,6 @@ jobs:
           path: .github/actions/jest-evaluator
 
       - name: Fetch Store evaluation
-        if: ${{ github.repository != env.template_name }}
         uses: actions/checkout@v2
         with:
           repository: betrybe/store-evaluation-action
