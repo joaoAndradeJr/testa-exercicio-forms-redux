@@ -57,23 +57,23 @@ Nesta aplicação, existirão quatro rotas. Uma página *Home*, duas páginas de
 - `professional-form` O segundo formulário deverá aparecer nesta rota. Esta página está criada no componente `pages/ProfessionalForm.jsx`
 - `form-display` Nesta rota, deverá aparecer o resumo de todas as informações preenchidas nos dois formulários anteriores. Esta página está criada no componente `pages/FormDisplay.jsx`
 
-Neste requisito, você deverá criar a navegação entre essas páginas, isto é, quando cada um dos botões forem clicados, a pessoa usuária deverá ser redirecionada para as rotas corretas.
+Neste requisito, você deverá criar a navegação entre essas páginas, isto é, quando cada um dos botões forem clicados, a pessoa usuária deverá ser redirecionada para as rotas corretas. *Repare que existe um componente Button, então leve isso em consideração na hora de fazer o redirecionamento*
 
 A ordem das páginas deverá obedecer: `/` -> `personal-form` -> `professional-form` -> `form-display`.
 
 ## 02 - Implementando o Redux
 
-Crie a estrutura de pastas e arquivos necessários para a implementação do Redux. Vale notar que o redux e dependências já estão instalados - inclusive o *Redux DevTools*
+Verifique a estrutura de pastas e arquivos necessários para a implementação do Redux. Vale notar que o redux e dependências já estão instalados - inclusive o *Redux DevTools*
 
 <details>
   <summary>
     Estrutura de pastas e arquivos:
   </summary>
 
-- Crie a pasta `src/redux` para agrupar todos os arquivos relacionados ao Redux;
-- Crie a pasta `src/redux/actions/` para armazenar as `actions` do projeto;
-- Crie a pasta `src/redux/reducers` para armazenar os `reducers` do projeto;
-- Crie o arquivo `src/redux/index.js`, que será o arquivo responsável por criar e exportar a `store` da aplicação.
+- A pasta `src/redux` para agrupar todos os arquivos relacionados ao Redux;
+- A pasta `src/redux/actions/` para armazenar as `actions` do projeto;
+- A pasta `src/redux/reducers` para armazenar os `reducers` do projeto;
+- O arquivo `src/redux/index.js`, que será o arquivo responsável por criar e exportar a `store` da aplicação.
 - Implemente o `reducer`.
 - Implemente a `store`.
 - Implemente as `actions`.
