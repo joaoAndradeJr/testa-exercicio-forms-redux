@@ -1,7 +1,9 @@
-import { act,  screen } from '@testing-library/react';
+import { act, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
-import renderWithRouterAndRedux, {renderWithRouterAndReduxWithoutInitialState} from './utils/renderWithRouterAndRedux';
+import renderWithRouterAndRedux, {
+  renderWithRouterAndReduxWithoutInitialState,
+} from './utils/renderWithRouterAndRedux';
 
 describe('01 - Implementando as rotas e estrutura das páginas', () => {
   it('Possui o botão "preencher formulário" na home', () => {
@@ -107,7 +109,7 @@ describe('01 - Implementando as rotas e estrutura das páginas', () => {
 
   it('Botão redireciona corretamente para o resumo das informações', () => {
     const { history } = renderWithRouterAndReduxWithoutInitialState(<App />);
-    
+
     act(() => {
       history.push('/professional-form');
     });
@@ -124,20 +126,18 @@ describe('02 - Implementando o Redux', () => {
   it('Possui a estrutura correta do estado global', () => {
     const { store } = renderWithRouterAndReduxWithoutInitialState(<App />);
     expect(store.getState()).toEqual({
-      profile: {
-        personal: {
-          name: '',
-          email: '',
-          cpf: '',
-          address: '',
-          city: '',
-          uf: '',
-        },
-        professional: {
-          resume: '',
-          role: '',
-          description: '',
-        },
+      personal: {
+        name: '',
+        email: '',
+        cpf: '',
+        address: '',
+        city: '',
+        uf: '',
+      },
+      professional: {
+        resume: '',
+        role: '',
+        description: '',
       },
     });
   });
@@ -145,7 +145,9 @@ describe('02 - Implementando o Redux', () => {
 
 describe('03 - Salvando as informações', () => {
   it('O primeiro formulário salva no estado global', async () => {
-    const { store, history } = renderWithRouterAndReduxWithoutInitialState(<App />);
+    const { store, history } = renderWithRouterAndReduxWithoutInitialState(
+      <App />
+    );
     jest.spyOn(store, 'dispatch');
     act(() => {
       history.push('/personal-form');
@@ -174,13 +176,13 @@ describe('03 - Salvando as informações', () => {
     });
     expect(title).toBeInTheDocument();
 
-    expect(store.getState().profile.personal.name).toBe('Nome Teste');
-    expect(store.getState().profile.personal.email).toBe('teste@email.com');
-    expect(store.getState().profile.personal.cpf).toBe('123456789-10');
-    expect(store.getState().profile.personal.address).toBe('Rua Teste');
-    expect(store.getState().profile.personal.city).toBe('Cidade Teste');
-    expect(store.getState().profile.personal.uf).toBe('Amapá');
-    expect(store.getState().profile.professional).toEqual({
+    expect(store.getState().personal.name).toBe('Nome Teste');
+    expect(store.getState().personal.email).toBe('teste@email.com');
+    expect(store.getState().personal.cpf).toBe('123456789-10');
+    expect(store.getState().personal.address).toBe('Rua Teste');
+    expect(store.getState().personal.city).toBe('Cidade Teste');
+    expect(store.getState().personal.uf).toBe('Amapá');
+    expect(store.getState().professional).toEqual({
       resume: '',
       role: '',
       description: '',
@@ -191,7 +193,9 @@ describe('03 - Salvando as informações', () => {
   });
 
   it('O segundo formulário salva no estado global', async () => {
-    const { store, history } = renderWithRouterAndReduxWithoutInitialState(<App />);
+    const { store, history } = renderWithRouterAndReduxWithoutInitialState(
+      <App />
+    );
     jest.spyOn(store, 'dispatch');
 
     act(() => {
@@ -217,12 +221,12 @@ describe('03 - Salvando as informações', () => {
     });
     expect(title).toBeInTheDocument();
 
-    expect(store.getState().profile.professional).toStrictEqual({
+    expect(store.getState().professional).toStrictEqual({
       resume: 'Currículo Teste',
       role: 'Cargo Teste',
       description: 'Descrição Teste',
     });
-    expect(store.getState().profile.personal).toStrictEqual({
+    expect(store.getState().personal).toStrictEqual({
       name: '',
       email: '',
       cpf: '',
@@ -239,20 +243,18 @@ describe('03 - Salvando as informações', () => {
 describe('04 - Renderizando as informações', () => {
   it('Renderiza as informações na tela', async () => {
     const initialState = {
-      profile: {
-        personal: {
-          name: 'Nome Teste',
-          email: 'email@teste.com',
-          cpf: '123.456.789-00',
-          address: 'Rua Teste',
-          city: 'Cidade Teste',
-          uf: 'Amapá',
-        },
-        professional: {
-          resume: 'Currículo Teste',
-          role: 'Cargo Teste',
-          description: 'Descrição Teste',
-        },
+      personal: {
+        name: 'Nome Teste',
+        email: 'email@teste.com',
+        cpf: '123.456.789-00',
+        address: 'Rua Teste',
+        city: 'Cidade Teste',
+        uf: 'Amapá',
+      },
+      professional: {
+        resume: 'Currículo Teste',
+        role: 'Cargo Teste',
+        description: 'Descrição Teste',
       },
     };
 
