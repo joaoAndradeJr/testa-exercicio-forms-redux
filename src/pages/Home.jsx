@@ -8,7 +8,7 @@ class Home extends Component {
         <Button
           label="Preencher Formulário"
           moreClasses="text-center is-info is-large is-fullwidth"
-          type="submit"
+          type="button"
         />
       </section>
     );
