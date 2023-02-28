@@ -17,7 +17,6 @@
 
 </details>
 
-
 <details>
   <summary><strong>🗣 Nos dê feedbacks sobre o exercício!</strong></summary> <br />
 
@@ -90,8 +89,8 @@ Verifique a estrutura de pastas e arquivos necessários para a implementação d
 - O estado global inicial do seu Redux deverá ter a seguinte estrutura:
 
 ```javascript
-profile: {
-  personal: {
+{
+  personalData: {
     name: '',
     email: '',
     cpf: '',
@@ -99,7 +98,7 @@ profile: {
     city: '',
     uf: '',
   },
-  professional: {
+  professionalData: {
     resume: '',
     role: '',
     description: '',
@@ -109,7 +108,7 @@ profile: {
 
 ## 03 - Salvando as informações
 
-Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `store`. Todos os dados devem, no estado global, estar dentro da chave `profile`. Para isso, você poderá utilizar o `combineReducers`.
+Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `store`. Todos os dados devem, no estado global, estar dentro das respectivas chaves `personalData` e `professionalData`.
 
 👀 **De olho na dica:**
 
