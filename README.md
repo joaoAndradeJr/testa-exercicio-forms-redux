@@ -120,4 +120,8 @@ Salve as informações das páginas `PersonalForm` e `ProfessionalForm` na `stor
 
 Renderize as informações que estão salvas na `store` no componente `FormDisplay`
 
+👀 **De olho na dica:**
+
+- Os testes irão pedir que o formato de exibição no componente `FormDisplay` seja com a seguinte estrutura: `Nome: { nome }`.
+
 ---
