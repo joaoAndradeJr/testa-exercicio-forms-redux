@@ -86,6 +86,7 @@ Verifique a estrutura de pastas e arquivos necessários para a implementação d
 - Lembre-se que, ao montar a estrutura do Redux, é preciso importar o `Provider`, que recebe a `store`, no `index.js`;
 - Caso tenha dificuldade para montar a estrutura do Redux, você pode consultar o **Checklist do Redux com React**, na seção 7 dia 3;
 - Faça as importações corretas para o bom funcionamento da sua aplicação.
+- Se você quiser, você poderá utilizar o `combineReducers`.
 - O estado global inicial do seu Redux deverá ter a seguinte estrutura:
 
 ```javascript
