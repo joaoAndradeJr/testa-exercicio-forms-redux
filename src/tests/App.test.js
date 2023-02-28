@@ -126,7 +126,7 @@ describe('02 - Implementando o Redux', () => {
   it('Possui a estrutura correta do estado global', () => {
     const { store } = renderWithRouterAndReduxWithoutInitialState(<App />);
     expect(store.getState()).toEqual({
-      personal: {
+      personalData: {
         name: '',
         email: '',
         cpf: '',
@@ -134,7 +134,7 @@ describe('02 - Implementando o Redux', () => {
         city: '',
         uf: '',
       },
-      professional: {
+      professionalData: {
         resume: '',
         role: '',
         description: '',
@@ -176,13 +176,13 @@ describe('03 - Salvando as informações', () => {
     });
     expect(title).toBeInTheDocument();
 
-    expect(store.getState().personal.name).toBe('Nome Teste');
-    expect(store.getState().personal.email).toBe('teste@email.com');
-    expect(store.getState().personal.cpf).toBe('123456789-10');
-    expect(store.getState().personal.address).toBe('Rua Teste');
-    expect(store.getState().personal.city).toBe('Cidade Teste');
-    expect(store.getState().personal.uf).toBe('Amapá');
-    expect(store.getState().professional).toEqual({
+    expect(store.getState().personalData.name).toBe('Nome Teste');
+    expect(store.getState().personalData.email).toBe('teste@email.com');
+    expect(store.getState().personalData.cpf).toBe('123456789-10');
+    expect(store.getState().personalData.address).toBe('Rua Teste');
+    expect(store.getState().personalData.city).toBe('Cidade Teste');
+    expect(store.getState().personalData.uf).toBe('Amapá');
+    expect(store.getState().professionalData).toEqual({
       resume: '',
       role: '',
       description: '',
@@ -221,12 +221,12 @@ describe('03 - Salvando as informações', () => {
     });
     expect(title).toBeInTheDocument();
 
-    expect(store.getState().professional).toStrictEqual({
+    expect(store.getState().professionalData).toStrictEqual({
       resume: 'Currículo Teste',
       role: 'Cargo Teste',
       description: 'Descrição Teste',
     });
-    expect(store.getState().personal).toStrictEqual({
+    expect(store.getState().personalData).toStrictEqual({
       name: '',
       email: '',
       cpf: '',
@@ -243,7 +243,7 @@ describe('03 - Salvando as informações', () => {
 describe('04 - Renderizando as informações', () => {
   it('Renderiza as informações na tela', async () => {
     const initialState = {
-      personal: {
+      personalData: {
         name: 'Nome Teste',
         email: 'email@teste.com',
         cpf: '123.456.789-00',
@@ -251,7 +251,7 @@ describe('04 - Renderizando as informações', () => {
         city: 'Cidade Teste',
         uf: 'Amapá',
       },
-      professional: {
+      professionalData: {
         resume: 'Currículo Teste',
         role: 'Cargo Teste',
         description: 'Descrição Teste',
