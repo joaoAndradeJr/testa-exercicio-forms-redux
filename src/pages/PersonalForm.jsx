@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Select from '../components/Select';
+import { connect } from 'react-redux';
+import { savePersonalDataInGlobalState } from '../redux/actions';
 
 const UF_LIST = [
   'Rio de Janeiro',
@@ -36,9 +38,14 @@ class PersonalForm extends Component {
     this.setState({ [name]: value });
   }
 
+  personalData = () => {
+    const { dispatch, history } = this.props;
+    dispatch(savePersonalDataInGlobalState(this.state));
+    history.push('/professional-form');
+  };
+
   render() {
     const { name, email, cpf, address, city, uf } = this.state;
-    const { history } = this.props;
     return (
       <form
         onSubmit={ (e) => {
@@ -98,7 +105,7 @@ class PersonalForm extends Component {
           type="submit"
           label="Próximo"
           moreClasses="is-fullwidth is-info"
-          onClick={ () => history.push('/professional-form') }
+          onClick={ this.personalData }
         />
       </form>
     );
@@ -111,4 +118,4 @@ PersonalForm.propTypes = {
   }).isRequired,
 };
 
-export default PersonalForm;
+export default connect()(PersonalForm);
