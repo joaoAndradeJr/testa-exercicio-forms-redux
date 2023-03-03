@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
@@ -65,5 +66,11 @@ class ProfessionalForm extends Component {
     );
   }
 }
+
+ProfessionalForm.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default ProfessionalForm;
