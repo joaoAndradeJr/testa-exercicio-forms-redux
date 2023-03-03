@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Select from '../components/Select';
-import { connect } from 'react-redux';
 import { savePersonalDataInGlobalState } from '../redux/actions';
 
 const UF_LIST = [
@@ -116,6 +116,7 @@ PersonalForm.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
 export default connect()(PersonalForm);
