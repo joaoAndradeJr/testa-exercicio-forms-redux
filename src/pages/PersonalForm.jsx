@@ -37,7 +37,7 @@ class PersonalForm extends Component {
 
   render() {
     const { name, email, cpf, address, city, uf } = this.state;
-
+    const { history } = this.props;
     return (
       <form
         onSubmit={ (e) => {
@@ -97,6 +97,7 @@ class PersonalForm extends Component {
           type="submit"
           label="Próximo"
           moreClasses="is-fullwidth is-info"
+          onClick={ () => history.push('/professional-form') }
         />
       </form>
     );

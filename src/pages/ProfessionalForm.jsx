@@ -22,6 +22,7 @@ class ProfessionalForm extends Component {
 
   render() {
     const { resume, role, description } = this.state;
+    const { history } = this.props;
     return (
       <form
         onSubmit={ (e) => {
@@ -58,6 +59,7 @@ class ProfessionalForm extends Component {
           type="submit"
           label="Enviar"
           moreClasses="is-fullwidth is-info"
+          onClick={ () => history.push('/form-display') }
         />
       </form>
     );
